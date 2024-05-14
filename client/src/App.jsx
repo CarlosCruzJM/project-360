@@ -9,7 +9,7 @@ import Footer from './components/Footer/Footer';
 
 function App() {
   return (
-    <div>
+    <div className=''>
       <Navbar />
       <div className='relative'>
         <CarouselDef/>

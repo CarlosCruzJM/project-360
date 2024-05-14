@@ -1,8 +1,20 @@
 import logo from '../../assets/360.png';
 import '../../styles/navbar.css';
-
+import { useState } from 'react';
 
 const Navbar = () => {
+
+    const [showMenu, setShowMenu] = useState(false);
+    const menuOptions = [
+        "360 Spray paint Matte finish",
+        "360 Spray paint Acabado brillante",
+        "360 Spray paint Fluorescente",
+        "360 Spray paint Alta presión",
+        "360 Spray paint Pure crome",
+        "Válvulas Delta Caps",
+        "Ediciones especiales"
+    ];
+
 
     return (
         <nav className="navbar z-10 relative font-gurajada">
@@ -17,7 +29,16 @@ const Navbar = () => {
                     <div className="cat1">
                         <a className="categorias" href="#inicio">INICIO</a>
                         <div className="line"></div>
-                        <a className="categorias" href="#cat">CATEGORIAS</a>
+                        <div className="categorias relative" onMouseEnter={() => setShowMenu(true)} onMouseLeave={() => setShowMenu(false)}>
+                            <span>CATEGORIAS</span>
+                            {showMenu && (
+                                <div className="absolute w-96 z-10 top-full bg-white shadow-md rounded-lg grid grid-cols-3 gap-4">
+                                {menuOptions.map((option, index) => (
+                                    <a key={index} href="#" className="block rounded-lg px-4 py-2 text-gray-800 hover:bg-gray-200">{option}</a>
+                                ))}
+                            </div>
+                            )}
+                        </div>
                     </div>
                 </div>
                 <div className="div2">
