@@ -18,6 +18,9 @@ export default {
         gurajada: ['Gurajada', 'sans-serif'],
         gugi: ['Guji', 'sans-serif'],
       },
+      height: {
+        '128': '32rem',
+      }
     },
   },
   plugins: [flowbite.plugin(),],

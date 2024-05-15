@@ -2,7 +2,7 @@ import "../../styles/styles.css";
 
 function Footer() {
     return (
-        <footer className="bg-gray-900 text-white py-8 absolute bottom-0 w-full font-gurajada">
+        <footer className="bg-gray-900 text-white py-8 w-full font-gurajada">
             <div className="container mx-auto flex flex-col items-center">
                 {/* Redes Sociales */}
                 <div className="mb-4">

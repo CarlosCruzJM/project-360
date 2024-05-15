@@ -1,7 +1,7 @@
 const Benefits = () => {
     return (
-        <div className=" w-full flex justify-center absolute -bottom-16 font-gugi">
-            <div className="bg-white w-2/4 h-32 flex flex-row items-center rounded-xl">
+        <div className=" w-full flex justify-center absolute -bottom-16 font-gugi z-10">
+            <div className="bg-slate-100 w-2/4 h-32 flex flex-row items-center rounded-xl">
                 <div className="w-1/3 h-full flex flex-row items-center m-6">
                     <i className="bi bi-truck text-5xl"></i>
                     <p className="ms-5 text-wrap">Envío gratis a todo el país a partir de $820 mxn</p>

@@ -3,7 +3,6 @@ import '../../styles/navbar.css';
 import { useState } from 'react';
 
 const Navbar = () => {
-
     const [showMenu, setShowMenu] = useState(false);
     const menuOptions = [
         "360 Spray paint Matte finish",
@@ -14,7 +13,6 @@ const Navbar = () => {
         "Válvulas Delta Caps",
         "Ediciones especiales"
     ];
-
 
     return (
         <nav className="navbar z-10 relative font-gurajada">
@@ -31,13 +29,11 @@ const Navbar = () => {
                         <div className="line"></div>
                         <div className="categorias relative" onMouseEnter={() => setShowMenu(true)} onMouseLeave={() => setShowMenu(false)}>
                             <span>CATEGORIAS</span>
-                            {showMenu && (
-                                <div className="absolute w-96 z-10 top-full bg-white shadow-md rounded-lg grid grid-cols-3 gap-4">
+                            <div className={`absolute w-72 p-4 z-10 top-8 left-0 bg-slate-100 shadow-md rounded-lg transition-all duration-500 ease-in-out ${showMenu ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}>
                                 {menuOptions.map((option, index) => (
-                                    <a key={index} href="#" className="block rounded-lg px-4 py-2 text-gray-800 hover:bg-gray-200">{option}</a>
+                                    <a key={index} href="#" className="block w-full rounded-md px-4 py-2 text-gray-800 hover:bg-gray-200">{option}</a>
                                 ))}
                             </div>
-                            )}
                         </div>
                     </div>
                 </div>
@@ -57,17 +53,16 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="cat2">
-                        <div className="cat">
-                            <a className="categorias" href="#combo">PAQUETES</a>
+                        <ul className="cat">
+                            <li><a className="categorias" href="#combo">PAQUETES</a></li>
                             <div className="line"></div>
-                            <a className="categorias" href="#about">NOSOTROS</a>
-                        </div>
+                            <li><a className="categorias" href="#about">NOSOTROS</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </nav>
     );
-
 };
 
 export default Navbar;
