@@ -17,6 +17,7 @@ export default {
       fontFamily: {
         gurajada: ['Gurajada', 'sans-serif'],
         gugi: ['Guji', 'sans-serif'],
+        mathernal: ['Mathernal', 'sans-serif'],
       },
       height: {
         '128': '32rem',
